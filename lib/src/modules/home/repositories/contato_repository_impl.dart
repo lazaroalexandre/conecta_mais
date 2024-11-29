@@ -3,7 +3,7 @@ import 'package:conecta_mais/src/core/constants/loca_storage/local_storage_const
 import 'package:conecta_mais/src/core/models/contato_model.dart';
 import 'package:conecta_mais/src/core/services/local_storage/local_storage_service.dart';
 
-import './contato_repository.dart';
+import 'contato_repository.dart';
 
 class ContatoRepositoryImpl implements ContatoRepository {
   final LocalStorageService localStorageService;

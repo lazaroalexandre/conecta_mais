@@ -1,4 +1,4 @@
-import 'package:conecta_mais/src/modules/home/presentations/pages/home_page.dart';
+import 'package:conecta_mais/src/modules/home/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
