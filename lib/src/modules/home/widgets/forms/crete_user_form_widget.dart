@@ -28,9 +28,6 @@ class CreteUserFormWidget extends StatelessWidget {
           ),
           FormInputWidget(
               text: "E-mail", textInputAction: TextInputAction.done),
-          SizedBox(
-            height: 40,
-          ),
         ],
       )),
     );
