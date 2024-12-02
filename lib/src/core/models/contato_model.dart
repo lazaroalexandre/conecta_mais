@@ -1,15 +1,16 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class ContatoModel {
   final String nome;
   final int numero;
-  final String email;
+  final String? email;
   final String avatar;
+  
   ContatoModel({
     required this.nome,
     required this.numero,
-    required this.email,
+    this.email,
   }) : avatar = nome[0].toUpperCase();
 
   Map<String, dynamic> toMap() {
@@ -25,7 +26,7 @@ class ContatoModel {
     return ContatoModel(
       nome: map['nome'] as String,
       numero: map['numero'] as int,
-      email: map['email'] as String,
+      email: map['email'] != null ? map['email'] as String : null,
     );
   }
 

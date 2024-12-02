@@ -1,3 +1,4 @@
+import 'package:conecta_mais/src/core/ui/theme_data_ui.dart';
 import 'package:conecta_mais/src/modules/home/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +10,8 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Conecta Mais',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
+      theme: ThemeDataUi.thema,
+      home: HomePage(),
     );
   }
 }
