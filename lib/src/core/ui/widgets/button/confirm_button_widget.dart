@@ -22,7 +22,7 @@ class ConfirmButtonWidget extends StatelessWidget {
           
         ),
       
-        onPressed: () => Navigator.pop(context),
+        onPressed: () => onPressed,
         child: Text(text),
       ),
     );

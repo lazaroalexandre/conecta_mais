@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:conecta_mais/src/modules/home/widgets/button/cancel_button_widget.dart';
-import 'package:conecta_mais/src/modules/home/widgets/button/confirm_button_widget.dart';
+import 'package:conecta_mais/src/core/ui/widgets/button/cancel_button_widget.dart';
+import 'package:conecta_mais/src/core/ui/widgets/button/confirm_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmModalWidget extends StatelessWidget {

@@ -31,7 +31,8 @@ class ItemContatoCardWidget extends StatelessWidget {
           trailing: IconButton(
             onPressed: removeOnPressed,
             icon: const Icon(
-              Icons.delete_outline_outlined,            ),
+              Icons.delete_outline_outlined,
+            ),
           ),
           contentPadding: const EdgeInsets.only(right: 10, left: 15),
         ),
