@@ -1,10 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:conecta_mais/src/core/ui/widgets/modal/confirm_modal_widget.dart';
-import 'package:conecta_mais/src/core/ui/widgets/modal/update_user_button_sheet_modal_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:conecta_mais/src/core/models/contato_model.dart';
 import 'package:conecta_mais/src/core/ui/widgets/cards/item_contato_card_widget.dart';
+import 'package:conecta_mais/src/core/ui/widgets/modal/confirm_modal_widget.dart';
+import 'package:conecta_mais/src/core/ui/widgets/modal/update_user_button_sheet_modal_widget.dart';
 
 class ContatoListViewWidget extends StatelessWidget {
   final int itemCount;
@@ -17,6 +17,25 @@ class ContatoListViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (itemCount == 0) {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const SizedBox(
+            height: 50,
+          ),
+          Image.asset(
+            "assets/images/Empty-amico.png",
+            width: 300,
+          ),
+          const Text(
+            "Contato não encontrado!",
+            style: TextStyle(fontSize: 18),
+          ),
+        ],
+      );
+    }
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
       itemCount: itemCount,
