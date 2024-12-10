@@ -1,5 +1,5 @@
-import 'package:conecta_mais/src/core/ui/theme/theme_data_ui.dart';
-import 'package:conecta_mais/src/modules/home/pages/home_page.dart';
+import 'package:conecta_mais/src/views/ui/theme/theme_data_ui.dart';
+import 'package:conecta_mais/src/views/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Conecta Mais',
       theme: ThemeDataUi.thema,
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

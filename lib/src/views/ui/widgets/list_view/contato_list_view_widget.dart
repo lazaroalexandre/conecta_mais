@@ -1,23 +1,28 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
+import 'package:conecta_mais/src/models/contato_model.dart';
+import 'package:conecta_mais/src/views/ui/widgets/modal/detail_user_button_sheet_modal_widget.dart';
 import 'package:flutter/material.dart';
 
-import 'package:conecta_mais/src/core/models/contato_model.dart';
-import 'package:conecta_mais/src/core/ui/widgets/cards/item_contato_card_widget.dart';
-import 'package:conecta_mais/src/core/ui/widgets/modal/confirm_modal_widget.dart';
-import 'package:conecta_mais/src/core/ui/widgets/modal/update_user_button_sheet_modal_widget.dart';
+import 'package:conecta_mais/src/views/ui/widgets/cards/item_contato_card_widget.dart';
 
 class ContatoListViewWidget extends StatelessWidget {
-  final int itemCount;
-  final ContatoModel contatoModel;
-  const ContatoListViewWidget({
+  ContatoListViewWidget({
     super.key,
-    required this.itemCount,
-    required this.contatoModel,
   });
+
+  List<ContatoModel> contatoList = [];
+
+  ContatoModel contato = ContatoModel(
+    nome: "Lázaro",
+    numero: 84992017118,
+    email: "lazaroalexandre.dev@gmail.com",
+  );
 
   @override
   Widget build(BuildContext context) {
-    if (itemCount == 0) {
+    contatoList.add(contato);
+    //contatoList.addAll(List.generate(10, (index) => contato));
+    if (contatoList.isEmpty) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,11 +43,11 @@ class ContatoListViewWidget extends StatelessWidget {
     }
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: itemCount,
+      itemCount: contatoList.length,
       shrinkWrap: true,
       itemBuilder: (context, index) {
         return ItemContatoCardWidget(
-          contatoModel: contatoModel,
+          contatoModel: contatoList[index],
           onPressedCard: () => showModalBottomSheet(
             isScrollControlled: true,
             isDismissible: false,
@@ -51,19 +56,9 @@ class ContatoListViewWidget extends StatelessWidget {
               padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).viewInsets.bottom,
               ),
-              child: UpdateUserButtonSheetModalWidget(
-                contatoModel: contatoModel,
+              child: DetailUserButtonSheetModalWidget(
+                contatoModel: contatoList[index],
               ),
-            ),
-          ),
-          removeOnPressed: () => showAdaptiveDialog(
-            barrierDismissible: false,
-            context: context,
-            builder: (context) => ConfirmModalWidget(
-              title: "Apagar Contato?",
-              content:
-                  'Ao confirmar, você está ciente que o contato chamado "${contatoModel.nome}" do número "${contatoModel.numero}" será apagado permanentimente.',
-              onPressed: () {},
             ),
           ),
         );

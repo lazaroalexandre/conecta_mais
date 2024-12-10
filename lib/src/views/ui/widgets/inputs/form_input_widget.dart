@@ -8,6 +8,7 @@ class FormInputWidget extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
   final TextEditingController controller;
+  final bool isRead;
   const FormInputWidget({
     super.key,
     required this.text,
@@ -15,6 +16,7 @@ class FormInputWidget extends StatelessWidget {
     this.inputFormatters,
     this.validator,
     required this.controller,
+    this.isRead = false,
   });
 
   @override
@@ -24,6 +26,7 @@ class FormInputWidget extends StatelessWidget {
       validator: validator,
       inputFormatters: inputFormatters,
       textInputAction: textInputAction,
+      readOnly: isRead,
       decoration:
           InputDecoration(hintText: text, contentPadding: EdgeInsets.zero),
     );

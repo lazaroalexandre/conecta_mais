@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 
 class SearchInputWidget extends StatelessWidget {
   final String text;
+  final void Function(String) onChanged;
+
   const SearchInputWidget({
     super.key,
     required this.text,
+    required this.onChanged,
   });
   @override
   Widget build(BuildContext context) {
@@ -39,6 +42,7 @@ class SearchInputWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
       ),
+      onChanged: onChanged,
     );
   }
 }

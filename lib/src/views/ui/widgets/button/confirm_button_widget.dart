@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 
 class ConfirmButtonWidget extends StatelessWidget {
   final void Function() onPressed;
-  final String text;
   const ConfirmButtonWidget({
     super.key,
     required this.onPressed,
-    required this.text,
   });
 
   @override
@@ -19,11 +17,9 @@ class ConfirmButtonWidget extends StatelessWidget {
           backgroundColor: WidgetStatePropertyAll(Colors.blue),
           foregroundColor: WidgetStatePropertyAll(Colors.white),
           elevation: WidgetStatePropertyAll(0),
-          
         ),
-      
-        onPressed: () => onPressed,
-        child: Text(text),
+        onPressed: onPressed,
+        child: const Text("Salvar"),
       ),
     );
   }

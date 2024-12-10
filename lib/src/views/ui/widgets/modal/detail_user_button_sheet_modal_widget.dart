@@ -1,12 +1,19 @@
-import 'package:conecta_mais/src/core/ui/widgets/forms/create_user_form_widget.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class CreateUserButtonSheetModalWidget extends StatelessWidget {
-  const CreateUserButtonSheetModalWidget({super.key});
+import 'package:conecta_mais/src/models/contato_model.dart';
+import 'package:conecta_mais/src/views/ui/widgets/forms/detail_user_form_widget.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
+class DetailUserButtonSheetModalWidget extends StatelessWidget {
+  final ContatoModel contatoModel;
+  const DetailUserButtonSheetModalWidget({
+    super.key,
+    required this.contatoModel,
+  });
+
+   @override
+   Widget build(BuildContext context) {
+       return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
       height: 350,
       child: Column(
@@ -26,13 +33,13 @@ class CreateUserButtonSheetModalWidget extends StatelessWidget {
                 width: 15,
               ),
               const Text(
-                "Novo Contato",
+                "Detalhes de Contato",
                 style: TextStyle(fontSize: 18),
               ),
             ],
           ),
-          const Expanded(
-            child: CreateUserFormWidget(),
+          Expanded(
+            child: DetailUserFormWidget(contatoModel: contatoModel,),
           ),
         ],
       ),
