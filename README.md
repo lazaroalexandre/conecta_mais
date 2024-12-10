@@ -7,25 +7,26 @@ Introdução ao Desenvolvimento de Aplicativos Móveis e Web com Flutter
 Neste minicurso introdutório, os participantes terão a oportunidade de explorar o desenvolvimento de aplicativos utilizando o Flutter, uma das tecnologias mais promissoras e demandadas no mercado atual. O curso abordará desde a história e importância do Flutter no mercado até a implementação prática de um aplicativo de contatos, utilizando o padrão de arquitetura MVC (Model-View-Controller). Este minicurso é ideal para quem deseja dar os primeiros passos no desenvolvimento de aplicativos móveis e web, entendendo tanto os conceitos teóricos quanto as práticas essenciais para criar aplicações funcionais e eficientes. Venha descobrir como a ciência e a tecnologia podem transformar o cotidiano através do desenvolvimento de aplicativos!
 
 ## Conteúdo Programático
-**1. História e Importância do Flutter no Mercado:**
-   -  Evolução do Flutter e sua relevância no desenvolvimento de aplicativos móveis e web.
-   - Comparação com outras tecnologias de desenvolvimento.
+**1. Desenvolvimento de aplicativos**
+   - O que é um aplicativo?
+   - Como está o movimento do mercado de desenvolvimento de aplicativos?
 
-**2. Arquitetura MVC:**
+**2. História e Importância do Flutter no Mercado:**
+   - Evolução do Flutter e sua relevância no desenvolvimento de aplicativos.
+   - Comparação com outras tecnologias de desenvolvimento mobile.
+
+**3. Arquitetura MVC:**
    - Introdução ao padrão MVC e sua aplicação no Flutter.
-   - Benefícios do uso do MVC no desenvolvimento de aplicativos.
 
-**3. Desenvolvimento de um Aplicativo de Contatos:**
+**4. Desenvolvimento de um Aplicativo de Contatos:**
    - Listar/Filtrar Contatos: Implementação de funcionalidades para listar e filtrar contatos.
    - Criar Contatos: Adicionar novos contatos à lista.
-   - Atualizar Contatos: Editar contatos existentes (se houver tempo).
-   - Remover Contatos: Excluir contatos da lista (se houver tempo).
 
-**4. Gerência de Estado com ChangeNotifier:**
+**5. Gerência de Estado com ChangeNotifier:**
    - Introdução à gerência de estado no Flutter.
    - Implementação do ChangeNotifier para gerenciar o estado do aplicativo.
 
-**5. Armazenamento Local com SharedPreferences:**
+**6. Armazenamento Local com SharedPreferences:**
    - Utilização do SharedPreferences para armazenamento de dados localmente.
 
 ## Público Alvo:
@@ -41,11 +42,11 @@ Primeiramente, instale todas as configurações do flutter em sua máquina, caso
 
 Após a configuração, volte ao projeto e execute os seguintes comandos no terminal:
 
+- Habilite o git globalmente:
+    - git config --global --add safe.directory '*'
+
 - Baixar e instalar dependências:
     - flutter pub get
-  
-- Crie o build do gerenciamento de estado:
-    - dart run build_runner build
 
 - Esolher o dispositivo:
     - flutter devices
