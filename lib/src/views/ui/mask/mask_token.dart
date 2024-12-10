@@ -10,6 +10,15 @@ final class MaskToken {
     ),
   ];
 
+  static final maskFormatter = MaskTextInputFormatter(
+    mask: '(##) #####-####',
+    filter: {'#': RegExp(r'[0-9]')},
+  );
+
+  static String formatPhoneNumber(String phoneNumber) {
+    return maskFormatter.maskText(phoneNumber);
+  }
+
   static final RegExp phoneOutput = RegExp(r'^(\d{2})(\d{5})(\d{4})$');
   static String photoOutputMacth(Match m) => '(${m[1]}) ${m[2]}-${m[3]}';
 
