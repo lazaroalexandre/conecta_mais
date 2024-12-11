@@ -2,7 +2,7 @@
 import 'package:conecta_mais/src/views/ui/widgets/forms/detail_user_form_widget.dart';
 import 'package:flutter/material.dart';
 
-import 'package:conecta_mais/src/models/contato/model/contato_model.dart';
+import 'package:conecta_mais/src/models/contato_model.dart';
 
 class DetailUserButtonSheetModalWidget extends StatelessWidget {
   final ContatoModel contatoModel;

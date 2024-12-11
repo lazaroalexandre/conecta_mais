@@ -1,5 +1,5 @@
-import 'package:conecta_mais/src/models/contato/repositories/contato_repository_impl.dart';
-import 'package:conecta_mais/src/services/local/local_service_impl.dart';
+import 'package:conecta_mais/src/repositories/contato_repository_impl.dart';
+import 'package:conecta_mais/src/services/local_service_impl.dart';
 import 'package:conecta_mais/src/controllers/contato_controller.dart';
 import 'package:conecta_mais/src/views/pages/home_page.dart';
 import 'package:conecta_mais/src/views/ui/theme/theme_data_ui.dart';

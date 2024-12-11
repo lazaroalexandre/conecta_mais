@@ -1,4 +1,4 @@
-import 'package:conecta_mais/src/models/contato/model/contato_model.dart';
+import 'package:conecta_mais/src/models/contato_model.dart';
 import 'package:conecta_mais/src/controllers/contato_controller.dart';
 import 'package:conecta_mais/src/views/ui/mask/mask_token.dart';
 import 'package:conecta_mais/src/views/ui/widgets/button/cancel_button_widget.dart';

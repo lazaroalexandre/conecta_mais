@@ -2,7 +2,7 @@
 import 'package:conecta_mais/src/views/ui/mask/mask_token.dart';
 import 'package:flutter/material.dart';
 
-import 'package:conecta_mais/src/models/contato/model/contato_model.dart';
+import 'package:conecta_mais/src/models/contato_model.dart';
 
 class ItemContatoCardWidget extends StatelessWidget {
   final ContatoModel contatoModel;

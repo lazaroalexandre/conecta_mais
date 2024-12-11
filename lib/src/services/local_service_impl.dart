@@ -1,4 +1,4 @@
-import 'package:conecta_mais/src/models/contato/model/contato_model.dart';
+import 'package:conecta_mais/src/models/contato_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'local_service.dart';
