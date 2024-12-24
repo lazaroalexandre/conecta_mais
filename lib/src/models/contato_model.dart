@@ -1,20 +1,25 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+import 'package:uuid/uuid.dart';
+
 class ContatoModel {
+  final String id;
   final String nome;
   final int numero;
   final String? email;
   final String avatar;
-  
+
   ContatoModel({
     required this.nome,
     required this.numero,
     this.email,
-  }) : avatar = nome[0].toUpperCase();
+  })  : id = const Uuid().v4(),
+        avatar = nome[0].toUpperCase();
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
+      'id': id,
       'nome': nome,
       'numero': numero,
       'email': email,
